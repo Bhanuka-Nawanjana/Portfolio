@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Video Background */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1; /* Ensure the video stays behind the content */
+}
+
+/* Loader Styling */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Initially hide content */
+#content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-out;
+}
+
+/* Show content after loader ends */
+#content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade-in animation */
+.fade-element {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Apply different delays */
+h1 { animation-delay: 0.5s; }
+p { animation-delay: 0.7s; }
+.profile-pic { animation-delay: 1s; }
+.link-btn { animation-delay: 1.3s; }
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #1e1e1e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Centering content in a white box with black text */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Optional: Glass effect */
+}
+
+/* Profile picture styling */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: #666; /* Darker text for description */
+}
+
+.links {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+/* Button Styling */
+.link-btn {
+    width: 250px;
+    padding: 12px;
+    margin: 10px;
+    background: #333;  /* Solid background color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.link-btn i {
+    font-size: 20px;
+}
+
+.link-btn:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+.link-btn:active {
+    background: #ff9800;
+}

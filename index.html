@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhanuka-Dissanayake</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body onload="hideLoader()">
+    <!-- Video Background -->
+    <video id="bg-video" autoplay loop muted>
+        <source src="Pink.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Loader -->
+    <div id="loader">
+        <dotlottie-player src="https://lottie.host/6cd17bc0-8bda-4b96-aec3-3c7dd0fb2c36/nkdLvmXvUc.lottie"
+            background="transparent" speed="1" style="width: 100px; height: 200px;" loop autoplay>
+        </dotlottie-player>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="content">
+        <div class="profile">
+            <img src="hero.jpg" alt="Profile Picture" class="profile-pic fade-element">
+            <h1 class="fade-element">Bhanuka Dissanayake</h1>
+            <p class="fade-element">Software Engineering Undergraduate | Web Developer</p>
+            <p class="fade-element">General Sir John Kotelawala Defence University</p>
+            <div class="links">
+                <button class="link-btn fade-element"
+                    onclick="buttonClick(this, 'mailto:bhanukaDissanayake621@gmail.com')">
+                    <i class="fa-solid fa-envelope"></i><span>Email</span>
+                </button>
+                <button class="link-btn fade-element" onclick="buttonClick(this, 'https://github.com/Bhanuka-2001')">
+                    <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                </button>
+                <button class="link-btn fade-element"
+                    onclick="buttonClick(this, 'https://www.linkedin.com/in/bhanuka-dissanayake-03a9ba352/')">
+                    <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span>
+                </button>
+                <button class="link-btn fade-element"
+                    onclick="buttonClick(this, 'https://www.instagram.com/bhanuka.nawanjana/')">
+                    <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+                </button>
+                <button class="link-btn fade-element"
+                    onclick="buttonClick(this, 'https://web.facebook.com/bhanuka.dissanayaka.73/')">
+                    <i class="fa-brands fa-facebook"></i> <span>Facebook</span>
+                </button>
+                <button class="link-btn fade-element" onclick="buttonClick(this, 'https://codepen.io/Bhanuka-Dissanayake-the-sans')">
+                    <i class="fa-brands fa-codepen"></i> <span>Code Pen</span>
+                </button>
+                <button class="link-btn fade-element" onclick="buttonClick(this, 'My CV.pdf')">
+                    <i class="fa-regular fa-file"></i><span>Download CV</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+
+</html>
